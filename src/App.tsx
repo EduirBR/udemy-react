@@ -6,7 +6,7 @@ function App() {
     return (
         <Router>
             <Navbar />
-            <div className="max-w-screen-md mx-auto pt-20">
+            <div className="max-w-screen-md mx-auto pt-20 px-5">
                 <AppRoutes />
             </div>
         </Router>

@@ -1,4 +1,4 @@
-const articles = [
+const articles_placeholders = [
     {
         name: "learn-react",
         title: "The Fastest Way to Learn React",
@@ -30,4 +30,15 @@ const articles = [
         ],
     },
 ];
-export default articles;
+
+export const get_articles = (name: string) => {
+    const article = articles_placeholders.find(
+        (article) => article.name == name
+    );
+    const excluded_arts = articles_placeholders.filter(
+        (article) => article.name !== name
+    );
+    return { article, excluded_arts };
+};
+
+export default articles_placeholders;
